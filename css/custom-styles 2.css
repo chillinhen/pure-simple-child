@@ -1,0 +1,88 @@
+/*** BSP: @extend %reset;***/
+.menu-footer-links-container:before, .menu-footer-links-container:after {
+  content: "";
+  display: table; }
+.menu-footer-links-container:after {
+  clear: both; }
+
+/*** Mixins & Placeholders ***/
+/**** caret ****/
+/* Bsp. @include alpha-background-color(rgba(black, 0.35), white); */
+/******* SVG *********/
+/* Mediaqueries breakpoints */
+/* Helper Classes */
+p:first-child {
+  margin-top: 0; }
+
+[id*="featuredtop"] {
+  text-align: center; }
+  [id*="featuredtop"] .widget_simpleimage p {
+    padding: 0 2em; }
+  [id*="featuredtop"] .widget_simpleimage .simple-image > a {
+    display: block;
+    margin: 0 auto; }
+    [id*="featuredtop"] .widget_simpleimage .simple-image > a img {
+      width: 150px !important;
+      height: 150px !important;
+      line-height: 150px;
+      -webkit-border-radius: 75px;
+      border-radius: 75px;
+      overflow: hidden; }
+
+.menu-footer-links-container {
+  float: right; }
+  .menu-footer-links-container li {
+    float: left;
+    display: inline-block;
+    border-right: 1px solid currentColor;
+    padding: 0 1em;
+    border-bottom: 0; }
+
+#page-banner {
+  position: relative; }
+  #page-banner .simple-image {
+    margin: 0; }
+    #page-banner .simple-image.fadeout {
+      opacity: .5;
+      -webkit-transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      -moz-transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+    #page-banner .simple-image + p:not(.more) {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 4em 10em;
+      padding: 4em;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: larger;
+      color: white;
+      -webkit-border-radius: 1em;
+      border-radius: 1em; }
+    #page-banner .simple-image + p.banner-info {
+      opacity: 1;
+      -webkit-transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      -moz-transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+      transition: all 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+  #page-banner .more {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1em; }
+    #page-banner .more a {
+      display: block;
+      white-space: nowrap;
+      background: rgba(0, 0, 0, 0.75);
+      border: 3px solid currentColor;
+      max-width: 300px;
+      text-align: center;
+      padding: 1em 2em;
+      margin: 0 auto;
+      -webkit-border-radius: 1em;
+      border-radius: 1em; }
+    #page-banner .more:hover a {
+      text-decoration: none; }
+
+/*# sourceMappingURL=custom-styles.css.map */

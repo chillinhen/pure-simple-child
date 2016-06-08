@@ -1,0 +1,94 @@
+/**** type ***/
+$baseHeadWeight:300;
+$baseFontWeight:400;
+$baseFontstack:'Open Sans', Arial, Verdana, Helvetica, sans-serif;
+$baseFontsize:14px;
+$baselineHeight:$baseFontsize * 1.13;
+$baseFontsizeMiddle:$baseFontsize * 1.13;
+
+$font-size-h1: 3.33em;
+$font-size-h2: 2em;
+$font-size-h3: $font-size-h1/2;
+$font-size-h4: $baseFontsize;
+$font-size-h5: $baseFontsize;
+$font-size-h6: $baseFontsize;
+
+$button-size:$baseFontsize * 1.5;
+
+/**** colors ***/
+
+$base-border-color:#ccc;
+$base-border:1px solid $base-border-color;
+
+//*** misc. measuremts ****/
+$headerHeight:80px;
+$small-spacing:1em;
+$base-spacing:1.2em;
+
+/**** Mixins *****/
+
+@mixin justify-text{
+    text-align:justify;
+    text-align-last:left;
+    max-width: 100%;
+}
+@mixin border-panel($width,$style,$color){
+    border-width: $width;
+    border-style: $style;
+    border-color:$color;
+}
+@mixin custom-button-style{
+	background-color:#677d92;
+	color: #fff !important;
+	@include button-style (8px, .5em 1em, larger);
+	display: inline-block;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+//border-image
+@mixin border-image($imgURL,$width,$offset,$hrepeat, $vrepeat){
+    border-style: solid;
+    border-width: $width;
+    -moz-border-image: $imgURL $offset $hrepeat $vrepeat;
+    -webkit-border-image: $imgURL $offset $hrepeat $vrepeat;
+    -o-border-image: $imgURL $offset $hrepeat $vrepeat;
+    border-image: $imgURL $offset fill $hrepeat $vrepeat;
+}
+// rotate
+@mixin rotate($dg){
+-moz-transform: rotate($dg);
+-webkit-transform: rotate($dg);
+-o-transform: rotate($dg);
+-ms-transform: rotate($dg);
+transform: rotate($dg);
+}
+///alpha background
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+/*@include alpha-background-color(rgba($blue, 0.75), white);*/
+/*** bullets***/
+@mixin bullets($url, $pos, $size){
+    background-image:$url;
+    background-repeat: no-repeat;
+    background-position: $pos;
+    background-size: $size;
+}
+/*** Thumbnail Sie ***/
+@mixin thumbnails{
+     height:510px;
+     width: 745px;
+}
+/*** Transition ***/
+@mixin transition {
+    -webkit-transition: all 200ms ease-in-out;
+-moz-transition: all 200ms ease-in-out;
+-ms-transition: all 200ms ease-in-out;
+-o-transition: all 200ms ease-in-out;
+transition: all 200ms ease-in-out;
+}

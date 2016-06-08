@@ -1,0 +1,115 @@
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/bower_components/bourbon/bourbon";
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/bower_components/neat/app/assets/stylesheets/_neat";
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/extends";
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/mixins";
+@import "/Users/chilliscope/Documents/Webseiten/toolbox/sass/myMixins/breakpoints";
+
+@import '_variables';
+@import '_type';
+
+@include selection {
+  background-color: #677d92;
+}
+
+* {
+  @include selection(true) {
+    background-color: #677d92;
+  }
+}
+
+p{
+	&:first-child {
+	  margin-top: 0; }
+	figure[id*="attachment"] + & {
+		margin-top: 0;
+	}
+}
+figure[id*="attachment"]{
+	&.align-left, &.alignleft{
+		float: left;
+		margin: 1em 2rem 0 0;
+	}
+	&.align-right, &.alignright{
+		float: right;
+		margin: .5em 0 0 2rem;
+	}
+}
+.wpcf7{
+	.entry-content &{
+		float: left;
+		margin: 1em 5rem 2em 0em;	
+		
+		textarea{
+			height: 15vH;
+		}
+	}
+}
+
+body.page {
+	#content{
+		padding: 0;
+	}
+}
+[class*="wp-image"]:not(.no-shadow) {
+	@include shadow;
+	
+}
+[id*="featuredtop"]{
+	text-align: center;
+	
+	.widget_simpleimage {
+		p{
+			padding: 0 2em;
+			> a {
+				display: block;
+				margin: 0 auto;
+				
+				img {
+					@include circle(150px);
+				}
+			}
+		&.more > a{
+				@include custom-button-style;
+			}
+		&.more > a:hover{
+			opacity: .8;
+			text-decoration: none;
+			}
+		}
+	
+	}
+
+}
+a.button{
+	@include custom-button-style;
+	&:hover{
+	opacity: .8;
+	text-decoration: none;
+	}
+}
+
+.menu-footer-links-container {
+	float: right;
+	
+	li{
+		float: left;
+		display: inline-block;
+		border-right: 1px solid currentColor;
+		padding: 0 1em;
+		border-bottom: 0;
+	} 
+}
+#page-banner{
+	.simple-image {
+	  margin: 0;   
+	}
+}
+#meilenstein{
+margin-bottom: .5em;
+	&:before{
+		content:'';
+		display: block;
+		height: 50px;
+		margin-top: -50px;
+	}
+}
