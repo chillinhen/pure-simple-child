@@ -88,9 +88,11 @@ a.button{
 	}
 }
 
-.menu-footer-links-container {
+[id*="nav_menu"] {
 	float: right;
-	
+}
+
+[id*="bottom"] .menu{
 	li{
 		float: left;
 		display: inline-block;

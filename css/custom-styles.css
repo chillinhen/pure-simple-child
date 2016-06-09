@@ -186,14 +186,15 @@ a.button {
     opacity: .8;
     text-decoration: none; }
 
-.menu-footer-links-container {
+[id*="nav_menu"] {
   float: right; }
-  .menu-footer-links-container li {
-    float: left;
-    display: inline-block;
-    border-right: 1px solid currentColor;
-    padding: 0 1em;
-    border-bottom: 0; }
+
+[id*="bottom"] .menu li {
+  float: left;
+  display: inline-block;
+  border-right: 1px solid currentColor;
+  padding: 0 1em;
+  border-bottom: 0; }
 
 #page-banner .simple-image {
   margin: 0; }

@@ -15,6 +15,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="<?php bloginfo( 'charset' ); ?>">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Psychotherapeutische Beratung,Bielefeld,Paderborn,Gütersloh, 
+   ,Coaching,Burnout,Persönlichkeitsanalyse,Ressourcenorientierung,Depression">
     
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">   
@@ -50,6 +52,7 @@
 		</div>      
 	</div>
 </div><!-- .navigation -->
+
 <?php if (is_front_page()): 
 	get_sidebar( 'banner' ); 
 endif;?> 
@@ -66,9 +69,10 @@ endif;?>
 	 endif; 
 ?>
 
-<?php get_sidebar( 'cta' ); ?>
-
-    <?php get_sidebar( 'featured-top' ); ?>
+<?php if (is_front_page()): 
+		get_sidebar( 'cta' ); 
+		get_sidebar( 'featured-top' ); 
+		endif;?>
 
 
 	<div id="primary" class="content-area">
